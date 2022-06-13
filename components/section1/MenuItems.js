@@ -15,7 +15,7 @@ const MenuItems = ({ showMenu, active }) => {
       <Close onClick={showMenu} className="cursor-pointer" />
       <li className="hover:text-white/20">
         <Link href="/">
-          <a>Home</a>
+          <a className="hover:underline decoration-4">Home</a>
         </Link>
       </li>
       <li className="hover:text-white/20">
@@ -23,7 +23,7 @@ const MenuItems = ({ showMenu, active }) => {
           </li>
       <li className="hover:text-white/20">
         <Link href="/">
-          <a>About</a>
+          <a className="hover:underline decoration-4">About</a>
         </Link>
       </li>
     </ul>
