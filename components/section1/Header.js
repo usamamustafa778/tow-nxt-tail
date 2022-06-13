@@ -24,18 +24,18 @@ const Header = () => {
         </div>
 
         <ul className="hidden gap-12 p-6 uppercase md:flex bg-white/10 ">
-          <li className="hover:text-white/70">
+          <li className="hover:text-white/90">
             <Link href="/">
-              <a>Home</a>
+              <a className="hover:underline decoration-4">Home</a>
             </Link>
             
           </li>
-          <li className="hover:text-white/70">
+          <li className="hover:text-white/90">
           <ServicesMenu />
           </li>
-          <li className="hover:text-white/70">
+          <li className="hover:text-white/90">
             <Link href="/">
-              <a>About</a>
+              <a className="hover:underline decoration-4">About</a>
             </Link>
           </li>
 
