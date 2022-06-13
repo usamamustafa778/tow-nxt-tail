@@ -1,6 +1,7 @@
 import { Close } from "@mui/icons-material";
 import React from "react";
 import Link from "next/link";
+import ServicesMenu from './ServicesMenu'
 
 const MenuItems = ({ showMenu, active }) => {
   return (
@@ -18,10 +19,8 @@ const MenuItems = ({ showMenu, active }) => {
         </Link>
       </li>
       <li className="hover:text-white/20">
-        <Link href="/">
-          <a>services</a>
-        </Link>
-      </li>
+          <ServicesMenu />
+          </li>
       <li className="hover:text-white/20">
         <Link href="/">
           <a>About</a>

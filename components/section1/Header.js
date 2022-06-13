@@ -4,6 +4,7 @@ import Link from "next/link";
 import MenuItems from "./MenuItems";
 import logo from "../../public/images/logo.png";
 import Image from "next/image";
+import ServicesMenu from './ServicesMenu'
 const Header = () => {
   const [active, setActive] = useState(false);
 
@@ -23,21 +24,21 @@ const Header = () => {
         </div>
 
         <ul className="hidden gap-12 p-6 uppercase md:flex bg-white/10 ">
-          <li className="hover:text-white/20">
+          <li className="hover:text-white/70">
             <Link href="/">
               <a>Home</a>
             </Link>
+            
           </li>
-          <li className="hover:text-white/20">
-            <Link href="/">
-              <a>services</a>
-            </Link>
+          <li className="hover:text-white/70">
+          <ServicesMenu />
           </li>
-          <li className="hover:text-white/20">
+          <li className="hover:text-white/70">
             <Link href="/">
               <a>About</a>
             </Link>
           </li>
+
         </ul>
 
         <MenuItems showMenu={showMenu} active={active} />
