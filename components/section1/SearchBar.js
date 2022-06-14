@@ -3,13 +3,11 @@ import countries from "./Data.json";
 import data from "./Data.json";
 
 export default function SearchBar() {
-
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
 
   const handleFilter = (event) => {
-
-    console.log("Input Occured")
+    console.log("Input Occured");
 
     const searchWord = event.target.value;
     setWordEntered(searchWord);
@@ -28,7 +26,6 @@ export default function SearchBar() {
     setFilteredData([]);
     setWordEntered("");
   };
-
 
   return (
     <div className="mt-5">
@@ -77,7 +74,9 @@ export default function SearchBar() {
           {filteredData.slice(0, 15).map((value, key) => {
             return (
               <a className="text-left" href="#" target="_blank">
-                <p className="p-3 font-normal hover:bg-gray-200">{value.title} </p>
+                <p className="p-3 font-normal hover:bg-gray-200">
+                  {value.title}{" "}
+                </p>
               </a>
             );
           })}
