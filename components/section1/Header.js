@@ -5,9 +5,10 @@ import MenuItems from "./MenuItems";
 import logo from "../../public/images/logo.png";
 import Image from "next/image";
 import ServicesMenu from './ServicesMenu'
-const Header = () => {
-  const [active, setActive] = useState(false);
 
+const Header = () => {
+
+  const [active, setActive] = useState(false);
   const showMenu = () => {
     setActive(!active);
   };

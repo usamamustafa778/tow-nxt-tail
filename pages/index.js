@@ -10,9 +10,10 @@ export default function Home() {
         <meta name="description" content="Nation Wide USA Toing" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Section />
-      
+      <main>
+        <Header />
+        <Section />
+      </main>
     </div>
   );
 }
