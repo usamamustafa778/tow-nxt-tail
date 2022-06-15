@@ -7,8 +7,6 @@ export default function SearchBar() {
   const [wordEntered, setWordEntered] = useState("");
 
   const handleFilter = (event) => {
-    console.log("Input Occured");
-
     const searchWord = event.target.value;
     setWordEntered(searchWord);
     const newFilter = data.filter((value) => {
@@ -68,9 +66,8 @@ export default function SearchBar() {
             Search
           </button>
         </div>
-      </form>
-      {filteredData.length != 0 && (
-        <div className="fixed w-4/12 bg-white rounded py-2 max-h-64 overflow-y-scroll text-black mt-2">
+        {filteredData.length != 0 && (
+        <div className="absolute w-11/12 bg-white rounded py-2 max-h-52 overflow-y-scroll text-black mt-2 md:w-4/12">
           {filteredData.slice(0, 15).map((value, key) => {
             return (
               <a className="text-left" href="#" target="_blank">
@@ -82,6 +79,9 @@ export default function SearchBar() {
           })}
         </div>
       )}
+      </form>
+
+      
     </div>
   );
 }

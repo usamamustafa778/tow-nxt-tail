@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <div className="fixed flex items-center justify-between w-full p-4 text-gray-100">
+    <div className="fixed flex z-50 items-center justify-between w-full text-gray-100 bg-black/10 md:backdrop-blur-md">
       <Image src={logo} alt="Picture of the author" width={180} height={40} />
       <nav>
         <div className="absolute scale-150 right-6 md:hidden top-6">
@@ -24,7 +24,7 @@ const Header = () => {
           />
         </div>
 
-        <ul className="hidden gap-12 p-6 uppercase md:flex bg-white/10 ">
+        <ul className="hidden gap-12 p-6 uppercase md:flex ">
           <li className="hover:text-white/90">
             <Link href="/">
               <a className="hover:underline decoration-4">Home</a>

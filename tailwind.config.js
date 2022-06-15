@@ -22,7 +22,12 @@ module.exports = {
 
     extend: {
       backgroundImage:{
-        'hero-image':'url("/images/towing-1.jpg")'
+        'hero-image':'url("/images/towing-1.jpg")',
+        'services-list' : 'url(/images/all-service-bg.jpg)',
+        'cta' : 'linear-gradient(rgba(0, 0, 0, 0.564), rgba(0, 0, 0, 0.527)),url(/images/tags-bg.jpg)'
+      },
+      gridTemplateColumns:{
+        'service-item': '30px 1fr',
       },
     },
   },
