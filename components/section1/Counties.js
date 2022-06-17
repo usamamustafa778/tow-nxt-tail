@@ -9,10 +9,11 @@ export default function States() {
   let { state} = router.query;
 
   const [counties, setCounties] = useState([]);
+  const url = `http://towing-api.3utilities.com:786/service/state/county?_q1=towing&_q2=${state}`
 
   // Fetching States
   useEffect(() => {
-    axios.get(`http://towing-api.3utilities.com:786/service/state/county?_q1=towing&_q2=${state}`)
+    axios.get(url)
     .then((res) => {
       setCounties(res.data);
     });
