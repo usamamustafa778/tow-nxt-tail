@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
-import Carousel from "../components/section1/Carousel";
 import Footer from "../components/section1/Footer";
 import Header from "../components/section1/Header";
 import Section from "../components/section1/Section";
 import ServicesSection from "../components/section1/ServicesSection";
+import States from "../components/section1/States";
 import Work from "../components/section1/Work";
+
 export default function Home() {
   return (
     <div>
@@ -19,7 +19,7 @@ export default function Home() {
         <Section />
         <Work />
         <ServicesSection/>
-        <Carousel/>
+        <States/>
         <Footer/>
       </main>
     </div>

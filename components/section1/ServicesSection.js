@@ -6,11 +6,11 @@ export default function ServicesSection() {
       {/* Section 1 */}
       <section className="w-10/12 py-10 text-center">
         <div className="flex items-center justify-center">
-          <h1 className="text-3xl font-bold">Towing Serivces</h1>
+          <h1 className="text-4xl font-bold">Towing Serivces</h1>
         </div>
         <br />
         <div className="flex flex-col items-center md:flex-row md:text-left md:items-start">
-          <p className="md:pr-10 md:mt-10">
+          <p className="md:pr-10 md:mt-6">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
@@ -47,7 +47,7 @@ export default function ServicesSection() {
       <section className="flex flex-col mt-16 items-center w-full py-20 bg-services-list bg-center bg-cover bg-fixed text-white">
         <div className="flex flex-col items-center w-10/12">
           <div className="flex items-center justify-center">
-            <h1 className="text-3xl font-bold">Towing Serivces</h1>
+            <h1 className="text-4xl font-bold">Towing Serivces</h1>
           </div>
           <br />
           <br />
@@ -101,7 +101,7 @@ export default function ServicesSection() {
       {/* Section 3 */}
       <section className="w-10/12 mt-7 py-10 text-center">
         <div className="flex items-center justify-center">
-          <h1 className="text-3xl font-bold">Towing Serivces</h1>
+          <h1 className="text-4xl font-bold">Towing Serivces</h1>
         </div>
         <div className="flex flex-col items-center md:flex-row md:text-left md:items-start">
           <p className="md:pr-10 md:mt-10">
