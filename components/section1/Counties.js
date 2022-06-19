@@ -6,9 +6,6 @@ import Link from "next/link";
 export default function States() {
   const router = useRouter();
   let { state } = router.query;
-  if (!state) return <></>;
-
-  console.log("state", router.query.state);
 
   const [counties, setCounties] = useState([]);
 
@@ -16,16 +13,19 @@ export default function States() {
 
   useEffect(() => {
     //async call
-    const fetchData = async () => {
-      const result = await axios.get(
-        `http://towing-api.3utilities.com:786/service/state/county?_q1=towing&_q2=${state}`
-      );
+    if (router.isReady) {
+      // Code using query
+      const fetchData = async () => {
+        const result = await axios.get(
+          `http://towing-api.3utilities.com:786/service/state/county?_q1=towing&_q2=${state}`
+        );
 
-      console.log(result.data);
-      setCounties(result.data);
-    };
-    fetchData();
-  }, [state]);
+        console.log(result.data);
+        setCounties(result.data);
+      };
+      fetchData();
+    }
+  }, [state, router.isReady]);
 
   return (
     <div className="w-full flex py-16 flex-col items-center">
