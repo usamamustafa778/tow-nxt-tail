@@ -6,24 +6,25 @@ import Link from "next/link";
 export default function States() {
   const router = useRouter();
   let { state } = router.query;
+  if (!state) return <></>;
+
+  console.log("state", router.query.state);
 
   const [counties, setCounties] = useState([]);
-  const url = `http://towing-api.3utilities.com:786/service/state/county?_q1=towing&_q2=${state}`;
-  console.log("01. Caught");
-  console.log(state);
-  console.log("02. Fetch URL");
-  console.log(url);
-  
+
   // Fetching States
+
   useEffect(() => {
-    console.log("03. Now running use effect hook");
-    const Api = () => {
-      axios.get(url).then((res) => {
-        console.log(res.data);
-        setCounties(res.data);
-      });
+    //async call
+    const fetchData = async () => {
+      const result = await axios.get(
+        `http://towing-api.3utilities.com:786/service/state/county?_q1=towing&_q2=${state}`
+      );
+
+      console.log(result.data);
+      setCounties(result.data);
     };
-    Api();
+    fetchData();
   }, [state]);
 
   return (
@@ -35,7 +36,7 @@ export default function States() {
             counties.map((val, key) => {
               return (
                 <li key={key}>
-                  <Link  href={val.county_route}>{val.county_name}</Link>
+                  <Link href={val.county_route}>{val.county_name}</Link>
                 </li>
               );
             })

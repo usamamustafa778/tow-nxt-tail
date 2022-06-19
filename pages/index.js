@@ -18,9 +18,9 @@ export default function Home() {
         <Header />
         <Section />
         <Work />
-        <ServicesSection/>
-        <States/>
-        <Footer/>
+        <ServicesSection />
+        <States />
+        <Footer />
       </main>
     </div>
   );

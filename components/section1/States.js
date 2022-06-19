@@ -8,7 +8,7 @@ export default function States() {
   // Fetching States
   useEffect(() => {
     axios.get(url).then((res) => {
-        console.log(res.data);
+      console.log(res.data);
       setStates(res.data);
     });
   }, []);
@@ -17,14 +17,14 @@ export default function States() {
     <div className="w-full flex py-16 flex-col items-center">
       <h1 className="text-4xl font-bold">Areas We Serve</h1>
       <div className="w-10/12 ">
-      <ul className="mt-10 columns-2 md:columns-4 lg:columns-6">
-        {states.map((val, key) => {
-          return (
-            <li className="">
-              <Link href={val.route}>{val.name}</Link>
-            </li>
-          );
-        })}
+        <ul className="mt-10 columns-2 md:columns-4 lg:columns-6">
+          {states.map((val, i) => {
+            return (
+              <li key={i} className="">
+                <Link href={val.route}>{val.name}</Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
