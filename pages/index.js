@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Towing Service</title>
+        <title>Towing Service | US</title>
         <meta name="description" content="Nation Wide USA Toing" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

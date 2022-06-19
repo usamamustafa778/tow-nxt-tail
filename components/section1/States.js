@@ -20,7 +20,7 @@ export default function States() {
         <ul className="mt-10 columns-2 md:columns-4 lg:columns-6">
           {states.map((val, i) => {
             return (
-              <li key={i} className="">
+              <li key={i} className="hover:text-blue-500">
                 <Link href={val.route}>{val.name}</Link>
               </li>
             );

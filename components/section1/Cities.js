@@ -4,34 +4,44 @@ import axios from "axios";
 import Link from "next/link";
 
 export default function Cities() {
+
   const router = useRouter();
   let { state } = router.query;
-  let { county } = router.query;
+  let { county} = router.query;
 
   const [cities, setCities] = useState([]);
-  const url = `http://towing-api.3utilities.com:786/service/state/county/city?_q1=towing&_q2=${state}&_q3=${county}`;
 
   // Fetching States
   useEffect(() => {
-    axios.get(url).then((res) => {
-      console.log("Cities");
-      console.log(res.data);
-      setCities(res.data);
-    });
-  }, []);
+    //async call
+    if (router.isReady) {
+      // Code using query
+      const fetchData = async () => {
+        const result = await axios.get(
+          `http://towing-api.3utilities.com:786/service/state/county/city?_q1=towing&_q2=${state}&_q3=${county}`
+        );
+        setCities(result.data);
+      };
+      fetchData();
+    }
+  }, [state, router.isReady]);
 
   return (
     <div className="w-full flex py-16 flex-col items-center">
-      <h1 className="text-4xl font-bold capitalize">{state}</h1>
+      <h1 className="text-4xl font-bold capitalize">{county}</h1>
       <div className="w-10/12 ">
         <ul className="mt-10 columns-2 md:columns-4 lg:columns-6">
-          {cities.map((val, i) => {
-            return (
-              <li key={i} className="">
-                <Link href={val.city_route}>{val.city_name}</Link>
-              </li>
-            );
-          })}
+          {cities ? (
+            cities.map((val, key) => {
+              return (
+                <li className="hover:text-blue-500" key={key}>
+                  <Link href={val.city_route}>{val.city_name}</Link>
+                </li>
+              );
+            })
+          ) : (
+            <h1>There are no cities</h1>
+          )}
         </ul>
       </div>
     </div>
