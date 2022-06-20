@@ -3,7 +3,7 @@ import Head from "next/head";
 import Zips from "../../../../../components/section1/Zips";
 
 export default function Home() {
-
+  
     const router = useRouter();
     let { county } = router.query;
   
