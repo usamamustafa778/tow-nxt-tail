@@ -1,5 +1,6 @@
+import Image from "next/image";
 import React from "react";
-import CallButton from "./CallButton"
+import CallButton from "./CallButton";
 
 export default function Footer() {
   return (
@@ -15,7 +16,8 @@ export default function Footer() {
             <li className="mt-2">Test Alturas, CA</li>
             <li className="mt-2">Test Alturas, CA</li>
           </ul>
-          <br /><br />
+          <br />
+          <br />
           <CallButton phoneText="+1-810-594-5229" phoneNo="+18105945229" />
         </div>
       </div>
@@ -35,8 +37,14 @@ export default function Footer() {
       <div className="w-full py-20 bg-black flex justify-center text-white">
         <div className="w-10/12 grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
-            <h1 className="text-4xl font-bold">5 Star Review!</h1>
-            <img src="/images/icons/starY.png" className="my-5" alt="" />
+            <h1 className="text-4xl font-bold mb-4">5 Star Review!</h1>
+            <Image
+              width={150}
+              height={40}
+              src="/images/icons/starY.png"
+              className="mt-10"
+              alt=""
+            />
             <p>
               Everyday Locksmith provides a 24/7 locksmith services. We are
               licensed and insured, and all of our locksmiths are up to date
@@ -44,11 +52,20 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h1 className="text-4xl capitalize">We accept all Major credit Cards!</h1>
-            <img src="/images/pay-cards.png" className="w-full mt-5" alt="" />
+            <h1 className="text-4xl mb-4 capitalize">
+              We accept all Major credit Cards!
+            </h1>
+            <Image
+              width={150}
+              height={47}
+              layout="responsive"
+              src="/images/pay-cards.png"
+              className="w-full mt-5"
+              alt=""
+            />
           </div>
           <div>
-          <CallButton phoneText="+1-810-594-5229" phoneNo="+18105945229" />
+            <CallButton phoneText="+1-810-594-5229" phoneNo="+18105945229" />
           </div>
         </div>
       </div>

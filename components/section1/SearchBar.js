@@ -29,7 +29,7 @@ export default function SearchBar() {
     <div className="mt-5">
       <form>
         <label
-          for="default-search"
+          htmlFor="default-search"
           className="mb-2 text-sm font-normal text-gray-900 sr-only dark:text-gray-300"
         >
           Search
@@ -44,9 +44,9 @@ export default function SearchBar() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               ></path>
             </svg>
@@ -70,7 +70,7 @@ export default function SearchBar() {
         <div className="absolute w-11/12 bg-white rounded py-2 max-h-52 overflow-y-scroll text-black mt-2 md:w-4/12">
           {filteredData.slice(0, 15).map((value, key) => {
             return (
-              <a className="text-left" href="#" target="_blank">
+              <a key={key} className="text-left" href="#" target="_blank">
                 <p className="p-3 font-normal hover:bg-gray-200">
                   {value.title}{" "}
                 </p>

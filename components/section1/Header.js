@@ -29,9 +29,9 @@ const Header = () => {
               <a className="hover:underline decoration-4">Home</a>
             </Link>
           </li>
-          <li className="hover:text-white/90">
+          <Link href="/services" className="hover:text-white/90">
             <ServicesMenu />
-          </li>
+          </Link>
           <li className="hover:text-white/90">
             <Link href="/">
               <a className="hover:underline decoration-4">About</a>

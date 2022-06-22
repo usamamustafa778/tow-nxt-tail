@@ -6,8 +6,10 @@ import Link from "next/link";
 export default function Cities() {
 
   const router = useRouter();
-  let { state } = router.query;
-  let { county} = router.query;
+  const { service} = router.query;
+  const { state } = router.query;
+  const { county} = router.query;
+  const url = `http://towing-api.3utilities.com:786/service/state/county/city?_q1=towing&_q2=${state}&_q3=${county}`;
 
   const [cities, setCities] = useState([]);
 
@@ -17,14 +19,12 @@ export default function Cities() {
     if (router.isReady) {
       // Code using query
       const fetchData = async () => {
-        const result = await axios.get(
-          `http://towing-api.3utilities.com:786/service/state/county/city?_q1=towing&_q2=${state}&_q3=${county}`
-        );
+        const result = await axios.get(url);
         setCities(result.data);
       };
       fetchData();
     }
-  }, [state, router.isReady]);
+  }, [url, router.isReady]);
 
   return (
     <div className="w-full flex py-16 flex-col items-center">

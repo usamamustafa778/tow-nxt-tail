@@ -1,8 +1,11 @@
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 
 export default function States() {
+  const router = useRouter();
+  // const { service } = router.query;
   const [states, setStates] = useState([]);
   const url = `http://towing-api.3utilities.com:786/service/state?_q1=towing`;
   // Fetching States
@@ -11,7 +14,7 @@ export default function States() {
       console.log(res.data);
       setStates(res.data);
     });
-  }, []);
+  }, [url]);
 
   return (
     <div className="w-full flex py-16 flex-col items-center">

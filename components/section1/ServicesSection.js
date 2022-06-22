@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function ServicesSection() {
@@ -14,21 +15,21 @@ export default function ServicesSection() {
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English. Many desktop publishing
+            distribution of letters, as opposed to using Content here, content
+            here, making it look like readable English. Many desktop publishing
             packages and web page editors now use Lorem Ipsum as their default
-            model text, and a search for 'lorem ipsum' will uncover many web
-            sites still in their infancy. Various versions have evolved over the
+            model text, and a search for lorem ipsum will uncover many web sites
+            still in their infancy. Various versions have evolved over the
             years, sometimes by accident, sometimes on purposeIt is a long
             established fact that a reader will be distracted by the readable
             content of a page when looking at its layout. It is a long
             established fact that a reader will be distracted by the readable
             content of a page when looking at its layout. The point of using
             Lorem Ipsum is that it has a more-or-less normal distribution of
-            letters, as opposed to using 'Content here, content here', making it
+            letters, as opposed to using Content here, content here, making it
             look like readable English. Many desktop publishing packages and web
             page editors now use Lorem Ipsum as their default model text, and a
-            search for 'lorem ipsum' will uncover many web sites still in their
+            search for lorem ipsum will uncover many web sites still in their
             infancy. Various versions have evolved over the years, sometimes by
             accident, sometimes on purposeIt is a long established fact that a
             reader will be distracted by the readable content of a page when
@@ -108,21 +109,21 @@ export default function ServicesSection() {
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English. Many desktop publishing
+            distribution of letters, as opposed to using Content here, content
+            here, making it look like readable English. Many desktop publishing
             packages and web page editors now use Lorem Ipsum as their default
-            model text, and a search for 'lorem ipsum' will uncover many web
-            sites still in their infancy. Various versions have evolved over the
+            model text, and a search for lorem ipsum will uncover many web sites
+            still in their infancy. Various versions have evolved over the
             years, sometimes by accident, sometimes on purposeIt is a long
             established fact that a reader will be distracted by the readable
             content of a page when looking at its layout. It is a long
             established fact that a reader will be distracted by the readable
             content of a page when looking at its layout. The point of using
             Lorem Ipsum is that it has a more-or-less normal distribution of
-            letters, as opposed to using 'Content here, content here', making it
+            letters, as opposed to using Content here, content here, making it
             look like readable English. Many desktop publishing packages and web
             page editors now use Lorem Ipsum as their default model text, and a
-            search for 'lorem ipsum' will uncover many web sites still in their
+            search for lorem ipsum will uncover many web sites still in their
             infancy. Various versions have evolved over the years, sometimes by
             accident, sometimes on purposeIt is a long established fact that a
             reader will be distracted by the readable content of a page when
@@ -144,7 +145,13 @@ function Service({ title, des }) {
   return (
     <div className="grid grid-cols-service-item">
       <div>
-        <img className="mt-2" src="/images/icons/check-icn.png" alt="" />
+        <Image
+          width={20}
+          height={20}
+          className="mt-2"
+          src="/images/icons/check-icn.png"
+          alt=""
+        />
       </div>
       <div>
         <h1 className="text-2xl font-semibold">{title}</h1>
